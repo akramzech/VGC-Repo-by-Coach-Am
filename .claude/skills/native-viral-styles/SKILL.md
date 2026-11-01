@@ -33,6 +33,16 @@ project lives at `template/` (build script, 11 scene modules, audio generator, A
 | Audio | Voice untouched (−16 to −18 LUFS integrated, TP ≤ −1.5). Supplied music: slowed 0.75×, low-pass 3.8 kHz, ~20–22 dB under the voice, sidechain duck, **drops out on the punchline** and returns for the CTA. SFX: one designed sound per event, every instance synthesized with its own seed/params, **no sample reused** |
 | Deliverable | 9:16 1080×1920 30 fps first (`render -q delivery`), then 3:4 / 16:9 re-layouts on request (never a raw crop) |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Analyse**: probe the footage (fps, LUFS, jump cuts), transcribe with `scripts/transcribe_words.py` (large-v3), and make face/hand grids with `scripts/grid_sheet.sh`. Present a beat-by-beat plan table (time | words | visual | technique | SFX) and wait for approval. Ask at most 3 questions (assets for orbit/takeover, output formats, any rhetorical beat to keep plain).

@@ -49,6 +49,16 @@ Each new video keeps the identity below and adds **one signature moment of its o
 | End | The logo appears **only at the end**. The last shot lifts off, the real footage behind it blurs to 16 px, the logo rises with a gold light sweep, then the script tagline and the contact line appear ("WhatsApp" in royal yellow). |
 | Audio | Voice cleaned (highpass, light denoise, 2.5:1 compression, loudnorm) to −16 LUFS. An original soft ambient pad (no vocals) sits ~20 dB under the voice, swells after the last word, and has one soft bell on the logo. SFX are soft and synthesised: lift whoosh, title pops, a jet under the flight and air on the zoom. |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Probe and plan.**

@@ -38,6 +38,16 @@ example lives in `template/` (the exact Merapu build script + audio generator + 
 | Audio | Voice untouched. Calm original bed (slow pads, 68 BPM) ≈ 21 dB under the voice, ducked under speech. One airy whoosh per blur-in, typing ticks, a click on send, soft ring blips, a sparkle on the CTA. Every SFX synthesised, none reused. Never louder than the voice |
 | Formats | 16:9 1920×1080 first, then 9:16 1080×1920 from the **same** script (`FMT=16x9|9x16`), never a raw crop. 3:4 / 4:3 only on request |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Analyse**: probe the footage, transcribe words with `scripts/transcribe_words.py` (text only; take sync from the

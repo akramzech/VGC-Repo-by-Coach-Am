@@ -52,6 +52,16 @@ Where everything else lives:
 | Music + mix | An **original synthesised** bed in D major (I–V–vi–IV), first cut on a beat, no drums in the intro, a one-bar drum drop at the CTA, resolving under the end card. About 12 dB under the VO, ducked a further 6 dB. Soft cue SFX: whoosh, pop, tick, tap, chime, riser, shimmer. Master −14 LUFS / −1.5 dBTP |
 | Honesty | Real material where possible. Label anything staged ("CONTOH", "Paparan contoh"). No invented results, counts, testimonials, prices or guarantees. No private links. Flag third-party marks in screenshots |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Brief and inputs.**

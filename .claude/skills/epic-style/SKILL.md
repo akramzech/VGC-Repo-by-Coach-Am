@@ -44,6 +44,16 @@ that fits its story, instead of copying the last one's. For Titlis these were th
 | Audio | VO at ~−16 LUFS, with no heavy processing; the TouchUp audio is already clean. The soundtrack is slowed to 0.75×, uses the quiet sections only (no drops), is low-passed at 3.8 kHz, and sits ~20 dB under the voice with sidechain ducking. Cross-fade to the next section on a scene change. Fade out into the outro. SFX are soft and synthesised: a lift whoosh, wind, cable hum, ice chimes and title pops, mixed at about −12 dB. |
 | Footage | Never grade, scrim, vignette or dim. Blur is the only treatment. Montage shots are cover-cropped to 9:16 (~1.78× upscale), so keep them short. Prefer portrait or 3–4K stills. |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Probe and plan.** Probe everything: duration, HDR, loudness, L/R correlation. Transcribe with `npx hyperframes transcribe … --model small --language ms`. Contact-sheet the TouchUp, the stills and the montage, scene-detecting the montage. Flag wrong-place assets: a Matterhorn still in a Titlis story, a Dolomites shot in a Swiss montage, AI-made "location" photos. Send the user a beat table (time, VO, background, graphic) and the open questions: the price, missing assets, and anything in the itinerary that contradicts the VO.

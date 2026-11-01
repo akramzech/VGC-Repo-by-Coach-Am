@@ -33,6 +33,7 @@ Whenever a student asks for a script, hook, copy, CTA, brief, plan or review, fi
 
 ### Helper skills (engine, not styles)
 - `hyperframes`, `hyperframes-core`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-cli`, `hyperframes-creative`, `hyperframes-keyframes`, `hyperframes-registry`, `hyperframes-studio`, `media-use`, `general-video` and `faceless-explainer` are the HyperFrames engine. Read `hyperframes` first whenever you build or render.
+- `storyboard-frames` turns the built composition into numbered storyboard sheets for review. Every style goes through it before rendering.
 - `elevenlabs-voiceover` makes a voice-over from a script. It uses the student's own ElevenLabs key.
 
 ## How every job runs
@@ -40,8 +41,14 @@ Whenever a student asks for a script, hook, copy, CTA, brief, plan or review, fi
 2. **Read the chosen style's SKILL.md and its `references/pipeline.md`** before planning.
 3. **Plan first.** Transcribe, then show a short beat table (time | words | visual) and the list of assets needed. Wait for "ok" before building.
 4. **Build in `work/<project-name>/`.** Copy the style's `template/` there and edit its data. Never write the template from scratch.
-5. **Check.** `npx hyperframes check` must show 0 errors. Snapshot every beat and look at the frames yourself.
-6. **Render** to `output/<project-name>_<9x16|16x9>.mp4`. Then verify with ffprobe and confirm loudness is about −14 LUFS.
+5. **Check.** `npx hyperframes check` must show 0 errors.
+6. **Storyboard frames (must).**
+   1. Follow `.claude/skills/storyboard-frames/`. Snapshot one still per beat onto numbered sheets, check them yourself, and send them to the student.
+   2. Refine frame by frame. Re-snapshot only the frames that changed.
+   3. Don't render any MP4 until the student replies "ok storyboard". The only exception is a student who says to skip it.
+7. **Render** to `output/<project-name>_<9x16|16x9>.mp4`.
+   1. Copy the approved sheet next to the video as `output/<project-name>_storyboard.jpg`.
+   2. Verify the video with ffprobe and confirm loudness is about −14 LUFS.
 
 ## House rules (from Coach Am's builds)
 - **The student's brand only.** Every style was first built for a real brand. The templates ship with neutral placeholders ("LOGO", "Nama Brand", "namabrand.com"); swap in the student's own logo, colours, CTA and handle. Never use another company's logo or name.

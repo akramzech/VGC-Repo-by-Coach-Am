@@ -12,4 +12,4 @@ Some style templates bundle open-licence fonts as `.woff2` files (Archivo, Inter
 Compositions load GSAP from a CDN under the GSAP Standard License (https://gsap.com/standard-license).
 
 ## Style skills
-The 12 style skills (`native-viral-styles`, `astra-styles`, `glow-keyword-style`, `pip-explainer-style`, `storyteller-edu-style`, `journey-map-hook`, `epic-style`, `travel-style`, `clean-launch-motion`, `konstruktivis-paper-cut`, `sketch-whiteboard-style` and `break-pattern-story-style`) were made by Coach Am (Video Guna Code) for students of the course. `vgc-master-knowledge` is Coach Am's own script and editing knowledge base.
+The 12 style skills (`native-viral-styles`, `astra-styles`, `glow-keyword-style`, `pip-explainer-style`, `storyteller-edu-style`, `journey-map-hook`, `epic-style`, `travel-style`, `clean-launch-motion`, `konstruktivis-paper-cut`, `sketch-whiteboard-style` and `break-pattern-story-style`) were made by Coach Am (Video Guna Code) for students of the course. `vgc-master-knowledge` is Coach Am's own script and editing knowledge base. `storyboard-frames` is the shared storyboard review step used by every style.

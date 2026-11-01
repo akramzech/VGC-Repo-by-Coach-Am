@@ -45,6 +45,16 @@ Where everything else lives:
 | CTA | Navy stage, the VGC wordmark ("edit VIDEO GUNA CODE_"), "KLIK LINK. / DAFTAR / SEKARANG." strips, and a mustard pill "KLIK LINK →" with a cursor tap |
 | Audio | VO: silences only are squeezed (between lines 0.20–0.26 s, inside sentences 0.14 s); speech and breaths are untouched. Song: subtle, about 21 dB under the voice, ducked, with a −3 dB dip at 2.2 kHz. Its **drop lands on the logo reveal**. SFX are sparse and synthesised: small pops, slams on punchlines and whooshes only on cuts or wipes. Mix to −14 LUFS, with a true peak of about −1.4 dBFS |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Assets:** run `zsh scripts/prep_assets.sh`, setting `CHAR`, `FOOT`, `CS`, `LOGO_ICON`, `LOGO_WORDMARK` and `CARDS`. Missing logos or cards become neutral placeholders; ask the student for theirs.

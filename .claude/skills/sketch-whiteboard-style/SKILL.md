@@ -43,6 +43,16 @@ Where everything else lives:
 | End | The real VGC logo is drawn or popped onto the last board, with a short tracked CTA line. No button unless asked |
 | Audio | Voice with gain only (+6 dB in the first build). The song is slowed to 0.75×, low-passed at 3.8 kHz, about **20–22 dB under the voice** and ducked a further 4 dB. SFX are synthesised and soft: a marker scribble under every pen stroke (quieter for drawings), small pops for stickers and a paper swish on each pan. A soft limiter at −1 dBFS and a 1 s fade-out |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Transcribe:** `/usr/bin/python3 scripts/transcribe.py hf/assets/vo_src.wav scripts/words_raw.json`. Fix the Whisper errors by hand.

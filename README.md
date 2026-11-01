@@ -6,6 +6,7 @@ Starter kit **Video Guna Code**. Masukkan footage atau voice-over, sebut nama st
 
 ## 1. Ambil repo ni
 1. Di GitHub, tekan **Use this template → Create a new repository**.
+   - Di phone, butang tu tak keluar. Buka link ni terus: **https://github.com/akramzech/VGC-Repo-by-Coach-Am/generate**
 2. Bagi nama projek kau, dan pilih **Private**.
 3. Buka repo baru tu dalam **Claude Code**. Ada dua cara:
    - **Laptop / Mac:** `git clone` repo tu, kemudian `cd` ke dalamnya dan taip `claude`.
@@ -31,7 +32,13 @@ Setup ni pasang Node.js, ffmpeg, package Python dan browser untuk render.
    - *"Buat motion ad guna **Konstruktivis** dari VO dalam input/vo.m4a."*
    - *"Aku ada footage bercakap, nak style yang tenang. Cadangkan 2 style."*
 3. Claude akan bagi **plan dulu**. Semak, kemudian balas *"ok"*.
-4. Video siap akan keluar dalam folder `output/`.
+4. Claude bina video dan bagi **storyboard**: gambar setiap frame utama, bernombor, dengan ayat VO di bawahnya.
+   - Nak ubah? Sebut nombor frame. Contoh: *"frame 3 tukar warna kuning"*, *"frame 5 tulisan besar sikit"*.
+   - Claude cuma ubah frame tu dan tunjuk storyboard baru. Frame yang diubah ada bingkai kuning.
+   - Bila semua dah okay, balas *"ok storyboard"*.
+5. Baru Claude render video penuh. Video siap akan keluar dalam folder `output/`, bersama gambar storyboard yang kau approve.
+
+> Kenapa storyboard dulu? Render video penuh ambil masa beberapa minit setiap kali. Storyboard siap dalam beberapa saat, jadi kau boleh betulkan semua dulu dan render sekali sahaja.
 
 ## Nak skrip dulu?
 Repo ni ada **VGC Master Knowledge** dengan formula skrip Coach Am. Contoh:

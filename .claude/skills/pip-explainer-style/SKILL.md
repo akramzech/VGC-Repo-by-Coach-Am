@@ -48,6 +48,16 @@ Where everything lives:
 - Use the student's own brand (logo, colours, CTA), never client's or VGC's.
 - Reply in casual Malaysian BM ("aku/kau/bro").
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 1. **Analyse.** Probe the footage (`ffmpeg -i`: fps, HDR or SDR). Make a contact sheet (`fps=0.5,tile`). Transcribe
    word-level (`scripts/transcribe.py`, `ASR_PROMPT` = key terms). Re-transcribe unclear bits; if still unclear, don't caption a guess.

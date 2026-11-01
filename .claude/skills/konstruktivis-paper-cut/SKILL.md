@@ -38,6 +38,16 @@ Where everything else lives:
 | End card | A red flood (a circle from the last play button or tap point, scaled to cover the frame). Then "EDIT VIDEO / GUNA CODE" in Montserrat 900 at 118 px cream, plus a 40 px tracked line "TEKAN LINK SEKARANG" in ink |
 | Audio | The voice is untouched apart from gain and a soft limiter. Use the user's song: align its drop to a mid-video reveal (here the song drop at 40.08 s lands on the door opening at 18.33 s, so the song ends on the CTA). The bed sits around −31 LUFS and ducks another 5 dB under speech. SFX are synthesised and soft: whooshes on handoffs, thocks on stamps, ticks. Mix to −14 LUFS, peak −1 dBFS |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Transcribe** the VO: `/usr/bin/python3 scripts/transcribe.py hf/assets/vo_src.wav scripts/words_raw.json`. Fix Whisper mis-hearings by hand (in the first build, "Ferry" was "sendiri", "prompt vote" was "Prompt Vault" and "CXPT" was "ChatGPT").

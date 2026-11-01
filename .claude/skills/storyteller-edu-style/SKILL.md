@@ -50,6 +50,16 @@ Where everything else lives:
 | Footage | The grade is never touched. Tag everything BT.709 and render `--sdr`. 9:16 from 1080p source = lanczos ×1.7778 strip (1848×1920), plus light unsharp |
 | Audio | Voice untouched. The supplied song at original tempo, **voice LUFS − 20**, a 0.3 s ramp, lifted ×2.2 on the end card. Every SFX is synthesised with its own seed (no repeats): click/double-click, ting (rising pitches), pop, paper, keyboard, riser, thud, sparkle, shutter, blip, tick-roll, plus whoosh-impact on the chapter cards **only**. Mix to −14 LUFS with a limiter |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Plan before rendering.** Transcribe the take and refine word starts from the energy envelope (`times.py`; Whisper drifts 0.2–0.3 s). Write `PLAN.md` as a beat table (time | words | visual | SFX) and list the assets needed. Wait for approval ("jangan render apa-apa, bagi plan dulu").

@@ -30,6 +30,16 @@ choices change per video. Pipeline details and numbers: `references/pipeline.md`
 | Audio | Voice cleaned (see pipeline), −16 LUFS. Music ~20 dB under voice, sidechain-ducked, lowpassed, fades to full length. SFX soft slide whooshes + pops/ticks, ~−30 LUFS. Supplied soundtracks are loud (−11 LUFS): always attenuate |
 | Deliverables | 16:9 1920×1080 30 fps first, then 9:16 1080×1920 (presenter native-res at the bottom, map/footage/titles above). Render `--quality delivery` only after approval |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. Gather: presenter cutout (green screen ok), baked backdrop plate(s), b-roll stills + montage, soundtrack, VO. Probe everything.

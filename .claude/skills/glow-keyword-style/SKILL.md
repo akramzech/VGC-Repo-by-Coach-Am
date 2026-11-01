@@ -46,6 +46,16 @@ Where everything lives:
 | End card | Hold ~3–3.5 s after the last word on the freeze frame, blurred 13 px and darkened ×0.44, with a slow 1.0→1.22 push |
 | Safe area | Critical text inside y ≈ 250–1500 and x ≈ 60–960. Keep the right rail (x > 960, y 1100–1650) and the bottom 400 px free. Never cover the face. One focal element at a time |
 
+## Storyboard first (must)
+
+Make storyboard frames with the `storyboard-frames` skill (`.claude/skills/storyboard-frames/`) before any MP4 render, draft or delivery:
+1. Build the composition.
+2. Snapshot one still per beat onto numbered sheets.
+3. Let the student refine frame by frame.
+4. Render only after they reply "ok storyboard".
+
+Every render step in the workflow below comes after that approval.
+
 ## Workflow
 
 1. **Watch and analyse everything first.**
