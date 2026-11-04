@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0d1020;font-family:Poppins,sans-serif}
+#f{position:relative;width:1920px;height:1080px;overflow:hidden}
+.abs{position:absolute}
+.bg{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.sm{font-weight:500;color:#fff;font-size:46px;line-height:1.1;text-shadow:0 3px 0 rgba(0,0,0,.55),0 6px 20px rgba(0,0,0,.65)}
+.bg2{font-weight:800;color:#EAFF00;font-size:92px;line-height:1.02;text-transform:uppercase;letter-spacing:-1px;text-shadow:0 5px 0 rgba(0,0,0,.65),0 8px 26px rgba(0,0,0,.7)}
+.w{color:#fff}
+.num{font-weight:800;color:#fff;font-size:150px;letter-spacing:-3px;text-shadow:0 0 28px rgba(255,255,255,.55),0 6px 0 rgba(0,0,0,.5)}
+.panel{position:absolute;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55);background:#000}
+.panel img{width:100%;height:100%;object-fit:cover;display:block}
+.lab{position:absolute;left:24px;top:-0px;font-weight:800;font-size:24px;color:#EAFF00;text-transform:uppercase}
+.tag{position:absolute;right:30px;top:28px;font-size:22px;color:#aab;font-weight:600;letter-spacing:3px}
+.card{position:absolute;background:#141833;border:2px solid rgba(255,255,255,.22);border-radius:22px}
+</style></head><body><div id="f"></div>
+<script>
+const q=new URLSearchParams(location.search).get('s')||'1';
+const f=document.getElementById('f');
+const P=n=>typeof n==='string'?n:`past/a${n}.png`;
+const OP={'dji/f131.png':'72% 50%','dji/f31.png':'55% 50%','dji/f97.png':'55% 50%','dji/f52.png':'50% 50%'};
+const H=(s)=>f.insertAdjacentHTML('beforeend',s);
+const bg=(t,z=1,ox=0,oy=0,x=0,y=0,extra='')=>`<img class="bg" src="dji/f${t}.png" style="transform:translate(${x}px,${y}px) scale(${z});transform-origin:${ox}px ${oy}px;${extra}">`;
+const cut=(t,z=1,ox=0,oy=0,x=0,y=0)=>`<img class="bg" src="cut/f${t}.png" style="transform:translate(${x}px,${y}px) scale(${z});transform-origin:${ox}px ${oy}px">`;
+const pan=(n,l,t,w,h,ry,rx,rz,extra='')=>`<div class="panel" style="left:${l}px;top:${t}px;width:${w}px;height:${h}px;transform:perspective(1700px) rotateY(${ry}deg) rotateX(${rx}deg) rotateZ(${rz}deg);${extra}"><img src="${P(n)}" style="object-position:${OP[P(n)]||'50% 50%'}"></div>`;
+
+if(q==='1'){ // HOOK: punch-in + two-tier caption + counter
+  H(bg(97,1.7,1200,330));
+  H(`<div class="abs" style="left:120px;top:690px"><div class="sm">dengan <span style="font-weight:800">RM90</span> sebulan, memang almost</div></div>`);
+  H(`<div class="abs bg2" style="left:114px;top:742px;font-size:150px;line-height:1">30 – 50 VIDEO</div>`);
+}
+if(q==='2'){ // FLOATING 3D BEHIND PRESENTER
+  H(bg(14));
+  H(pan('dji/f131.png',120,150,430,760,28,6,-3));
+  H(pan(2,470,70,470,830,18,4,-1.5));
+  H(pan('dji/f31.png',1430,120,430,760,-26,6,3));
+  H(pan(5,1190,260,330,590,-18,5,2,'opacity:.95'));
+  H(cut(14));
+  H(`<div class="abs" style="left:0;width:1920px;top:880px;text-align:center"><div class="sm" style="font-size:44px">video aku dekat social media</div><div class="bg2" style="font-size:96px">HEAVY EDITING · <span class="w">BANYAK B-ROLL</span></div></div>`);
+}
+if(q==='3'){ // SLIDE ROW BEHIND PRESENTER
+  H(bg(66));
+  const L=[2,'dji/f131.png',5,'dji/f31.png','dji/f97.png','dji/f52.png'];
+  L.forEach((n,i)=>H(pan(n,-200+i*360,140,330,590,-38,0,0,'transform-origin:50% 50%')));
+  H(cut(66));
+  H(`<div class="abs" style="left:110px;top:800px"><div class="sm">so untuk</div><div class="bg2" style="font-size:112px;line-height:1">WEEKLY PUN <span class="w">SAMA</span></div></div>`);
+}
+if(q==='4'){ // SAME VIDEO, 3 SIZES, PLAYING TOGETHER (tidy labels, shared baseline)
+  H(`<div class="abs" style="left:0;top:0;width:1920px;height:1080px;background:radial-gradient(1300px 760px at 50% 52%,#1d2350,#0d1020)"></div>`);
+  const T=66, BASE=830;
+  const col=(cx,w,h,ry,bgpos,bgsize,label,sub)=>{
+    const L=cx-w/2, Tp=BASE-h;
+    return `<div class="abs" style="left:${cx-w*0.62}px;top:${BASE-6}px;width:${w*1.24}px;height:38px;background:radial-gradient(closest-side,rgba(0,0,0,.55),rgba(0,0,0,0));filter:blur(6px)"></div>`+
+    `<div class="panel" style="left:${L}px;top:${Tp}px;width:${w}px;height:${h}px;transform:perspective(1800px) rotateY(${ry}deg);background:url(dji/f${T}.png) ${bgpos} /${bgsize};border:2px solid rgba(255,255,255,.18)"></div>`+
+    `<div class="abs" style="left:${cx-130}px;width:260px;top:${BASE+44}px;text-align:center"><span style="display:inline-block;background:#EAFF00;color:#0d1020;font-weight:800;font-size:34px;padding:2px 26px 4px;border-radius:999px">${label}</span><div style="margin-top:10px;font-weight:600;font-size:24px;color:#aab3d6;letter-spacing:2px">${sub}</div></div>`;
+  };
+  // 9:16  (h 700) | 1:1 (h 620) | 16:9 (w 700)
+  H(col(400,338,600,14,'-387px 0','1067px 600px','9:16','REELS · TIKTOK'));
+  H(col(960,540,540,0,'-230px 0','960px 540px','1:1','FEED'));
+  H(col(1520,600,338,-14,'0 0','600px 338px','16:9','YOUTUBE'));
+  H(`<div class="abs" style="left:0;width:1920px;top:56px;text-align:center"><div class="sm" style="font-size:40px">satu video, satu minit setengah ke bawah</div><div class="bg2" style="font-size:100px;margin-top:6px">MACAM-MACAM <span class="w">SIZE</span></div></div>`);
+}
+if(q==='5'){ // INFOGRAPHIC
+  H(`<div class="abs" style="left:0;top:0;width:1920px;height:1080px;background:#0f1224"></div>`);
+  H(`<div class="abs bg2" style="left:0;width:1920px;text-align:center;top:70px;font-size:120px">2 JENIS <span class="w">USAGE</span></div>`);
+  H(`<div class="card" style="left:180px;top:300px;width:700px;height:620px"></div><div class="card" style="left:1040px;top:300px;width:700px;height:620px"></div>`);
+  H(`<div class="abs" style="left:180px;width:700px;top:330px;text-align:center;font-weight:800;font-size:44px;color:#EAFF00">SESSION</div><div class="abs" style="left:1040px;width:700px;top:330px;text-align:center;font-weight:800;font-size:44px;color:#EAFF00">WEEKLY</div>`);
+  H(`<svg class="abs" style="left:330px;top:410px" width="400" height="470" viewBox="0 0 400 470"><circle cx="200" cy="200" r="160" fill="none" stroke="#2a3060" stroke-width="26"/><circle cx="200" cy="200" r="160" fill="none" stroke="#EAFF00" stroke-width="26" stroke-linecap="round" stroke-dasharray="1005" stroke-dashoffset="250" transform="rotate(-90 200 200)"/><text x="200" y="215" text-anchor="middle" fill="#fff" font-family="Poppins" font-weight="800" font-size="78">5 JAM</text><text x="200" y="445" text-anchor="middle" fill="#9aa" font-family="Poppins" font-weight="500" font-size="28">habis → tidur → balik</text></svg>`);
+  const d=['ISN','SEL','RAB','KHA','JUM','SAB','AHD'];
+  d.forEach((x,i)=>H(`<div class="abs" style="left:${1090+i*84}px;top:${i<4?470:560}px;width:64px;height:${i<4?330:240}px;border-radius:14px;background:${i<4?'#EAFF00':'#2a3060'};"></div><div class="abs" style="left:${1090+i*84}px;top:830px;width:64px;text-align:center;font-weight:600;font-size:20px;color:#fff">${x}</div>`));
+  H(`<div class="abs" style="left:1040px;width:700px;top:395px;text-align:center;font-weight:600;font-size:28px;color:#9aa">7 hari · habis awal → tunggu</div>`);
+}
+if(q==='6'){ // SPLIT LAYOUT
+  H(`<div class="abs" style="left:0;top:0;width:1920px;height:1080px;background:#0b0e1c"></div>`);
+  H(`<div class="abs" style="left:-80px;top:20px;width:1040px;height:1040px;overflow:hidden"><img src="dji/f66.png" style="position:absolute;width:1920px;height:1080px;left:-560px;top:-120px;transform:scale(1.5);transform-origin:960px 400px;filter:none"></div>`);
+  H(`<div class="card" style="left:1010px;top:180px;width:800px;height:720px"></div>`);
+  H(`<div class="abs" style="left:1010px;width:800px;top:210px;text-align:center;font-weight:800;font-size:40px;color:#EAFF00">SEBULAN</div>`);
+  H(`<div class="abs num" style="left:1010px;width:800px;text-align:center;top:300px">RM90</div>`);
+  H(`<div class="abs" style="left:1010px;width:800px;text-align:center;top:480px;font-size:70px;color:#EAFF00">↓</div>`);
+  H(`<div class="abs num" style="left:1010px;width:800px;text-align:center;top:560px;font-size:130px">30–50</div>`);
+  H(`<div class="abs" style="left:1010px;width:800px;text-align:center;top:740px;font-weight:800;font-size:56px;color:#EAFF00">VIDEO</div>`);
+  H(`<div class="abs" style="left:70px;top:880px"><div class="sm">termasuk tutorial yang panjang</div></div>`);
+}
+if(q==='7'){ // PUNCH-IN WITH STACKED CAPTION
+  H(bg(66,1.35,1250,300,0,0));
+  H(`<div class="abs" style="left:110px;top:640px"><div class="sm">hari Isnin sampai hari Khamis</div><div class="bg2" style="font-size:112px;line-height:1">GUNA <span class="w">GILA-GILA</span></div><div class="bg2" style="font-size:112px;line-height:1">SAMPAI <span class="w">HABIS</span></div></div>`);
+}
+</script></body></html>

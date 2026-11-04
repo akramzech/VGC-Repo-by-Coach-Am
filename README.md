@@ -61,6 +61,8 @@ Claude akan tanya maklumat yang kurang, dan takkan reka testimoni atau harga.
 | Journey Map Hook | "Journey Map Hook" | Iklan travel yang dibuka dengan peta 3D |
 | Epic Style | "Epic Style" | Iklan travel 9:16, warna bendera ke warna brand |
 | Travel Style | "Travel Style" | Travel lifestyle / pakej percutian, navy + emas |
+| Neon Caption Explainer | "Neon Caption Explainer" | Explainer bisnes, caption kuning neon besar, B-roll yang lukis apa kau cakap |
+| Long-Form Video | "Long-Form Video" | Vlog YouTube 3–10 minit, hook dari ayat paling klimaks, boleh potong jadi Shorts |
 
 ### ✨ Motion Ad (tak perlu footage)
 | Style | Sebut | Sesuai untuk |

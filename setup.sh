@@ -26,8 +26,8 @@ node --version; ffmpeg -version | head -1
 say "2/4 Python packages"
 # Pick a python that can install packages (macOS system python first, it is what the style scripts were tested with)
 PY=python3; [ "$OS" = "Darwin" ] && [ -x /usr/bin/python3 ] && PY=/usr/bin/python3
-$PY -m pip install --user --upgrade numpy scipy pillow opencv-python-headless pypdf soundfile faster-whisper 2>/dev/null \
-  || $PY -m pip install --user --break-system-packages --upgrade numpy scipy pillow opencv-python-headless pypdf soundfile faster-whisper
+$PY -m pip install --user --upgrade numpy scipy pillow opencv-python-headless pypdf soundfile faster-whisper matplotlib 2>/dev/null \
+  || $PY -m pip install --user --break-system-packages --upgrade numpy scipy pillow opencv-python-headless pypdf soundfile faster-whisper matplotlib
 $PY -c "import numpy, scipy, PIL, cv2, pypdf; print('python ok:', '$PY')"
 
 say "3/4 HyperFrames + render browser"
