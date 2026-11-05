@@ -12,6 +12,8 @@ Starter kit **Video Guna Code**. Masukkan footage atau voice-over, sebut nama st
    - **Laptop / Mac:** `git clone` repo tu, kemudian `cd` ke dalamnya dan taip `claude`.
    - **Phone / browser:** buka **claude.ai/code** dan pilih repo kau.
 
+> **Guna Codex?** Boleh. Buka folder repo dalam Codex. Codex baca `AGENTS.md` dan nampak semua style melalui `.agents/skills`, iaitu set skill yang sama dengan Claude. Sebut nama style macam biasa, atau taip `$` untuk pilih skill. Arahan dalam README ni sama untuk Claude dan Codex.
+
 ## 2. Setup (sekali sahaja)
 Dalam Claude Code, taip:
 ```
