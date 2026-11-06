@@ -21,6 +21,7 @@ Talk to the student in Bahasa Melayu (casual, like Coach Am) unless they write i
 | `travel-style` | "Travel Style" | 9:16 travel lifestyle / holiday package: navy + gold, cleaned phone takes, flight-map trail |
 | `neon-caption-explainer` | "Neon Caption Explainer" | Raw talking-head or workshop clip → big yellow neon captions, head-tracked punch-ins, explainer B-roll drawn on the spoken word. 16:9 first, then 9:16 |
 | `long-form-video` | "Long-Form Video" | 3–10 min YouTube vlog: a cold-open hook from the climax line, full-screen analogy stages, behind-the-head scenes; also cuts 9:16 Shorts |
+| `orangy-blues` | "Orangy Blues" | Long 9:16 talking-head clip (1–3 min): big orange words behind the head, an analogy animation per idea, a different card layout per section, full-screen B-roll, trailer-style music, blurred "Result & Feedback" outro |
 
 ### Motion Ad (100 % motion: voice-over, plus at most a few photos)
 | Skill | Say | Look |

@@ -1,0 +1,44 @@
+      #card { position:absolute; overflow:hidden; }
+      :root { --ground:#0c0c10; --ink:#0c0c10; --paper:#fff; --accent:__ACCENT__; --accent2:__ACCENT2__; --coral:#d97757; }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:var(--ground); font-family:"Poppins",sans-serif; }
+      #root { position:absolute; left:0; top:0; width:1080px; height:1920px; background:var(--ground); overflow:hidden; }
+      .zoomwrap { position:absolute; left:0; top:0; width:558px; height:992px; transform-origin:47% 30%; }
+      .vid { position:absolute; left:0; top:0; width:558px; height:992px; object-fit:cover; }
+      .layer { position:absolute; left:0; top:0; width:558px; height:992px; }
+      /* kinetic words (reference-reel style: staggered small sans + big gradient + serif italic) */
+      .sm { position:absolute; opacity:0; font-weight:800; font-size:36px; color:#fff; white-space:nowrap;
+        text-shadow:0 3px 0 rgba(12,12,16,.92), 0 0 14px rgba(12,12,16,.45); }
+      .row { position:absolute; left:0; width:558px; display:flex; justify-content:center; gap:14px; }
+      .row .sm { position:static; }
+      .big { position:absolute; left:0; width:558px; text-align:center; opacity:0; line-height:1; font-family:"Archivo Black",sans-serif; }
+      .ds { display:inline-block; filter: drop-shadow(0 8px 12px rgba(12,12,16,.5)); }
+      .gt { display:inline-block; background:linear-gradient(180deg,__G0__ 0%,__ACCENT__ 46%,__G2__ 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+      .ser { position:absolute; left:0; width:558px; text-align:center; opacity:0; font-family:"Playfair Display",serif; font-style:italic; font-weight:700; color:#fff;
+        text-shadow:0 5px 0 rgba(12,12,16,.88), 0 0 26px rgba(255,255,255,.32); white-space:nowrap; }
+      .sweep { position:absolute; height:7px; border-radius:4px; background:linear-gradient(90deg, __ACCENT_0__, __ACCENT__ 18%, __ACCENT2__ 82%, __ACCENT2_0__); opacity:0; transform-origin:0 50%; }
+      .spark { position:absolute; width:46px; height:46px; background:#fff; opacity:0; clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%); }
+
+      /* Claude Code prompt bar + floating element cards (glass) */
+      #strip { position:absolute; left:28px; top:528px; width:800px; height:320px; }
+      .fc { position:absolute; top:0; width:180px; height:320px; border-radius:22px; overflow:hidden; opacity:0;
+        border:1.5px solid rgba(255,255,255,.55); box-shadow:inset 0 1.5px 0 rgba(255,255,255,.5), 0 24px 48px rgba(0,0,0,.5); background:#14151b; }
+      .th { position:absolute; inset:0; background-size:cover; background-position:50% 8%; }
+      .lb { position:absolute; left:10px; bottom:10px; font-weight:800; font-size:24px; letter-spacing:.02em; color:var(--ink); background:var(--accent); padding:3px 11px; border-radius:8px; white-space:nowrap; }
+      #fc1 .th.r { width:50%; background-image:url(assets/th_raw.jpg); background-size:180px auto; background-position:0 0; border-right:3px solid var(--accent); }
+      #fc1 .th.f { background-image:url(assets/th_fix.jpg); background-size:180px auto; background-position:0 0; }
+      #fc2 .th { background-image:url(assets/th_fix.jpg); background-size:180px auto; background-position:0 0; }
+      #fc3 .th { background-image:url(assets/th_fix.jpg); background-size:360% auto; background-position:38% 14%; }
+      #fc3 .cr { position:absolute; inset:36px 24px 78px 24px; border:3px solid rgba(255,255,255,.9); border-radius:10px; }
+      #fc4 { background:linear-gradient(160deg,#20222c,#0f1015); }
+      #fc4 .eq { position:absolute; left:22px; right:22px; top:62px; height:118px; display:flex; align-items:center; justify-content:space-between; }
+      #fc4 .eq u { display:block; width:13px; height:90px; border-radius:7px; background:linear-gradient(180deg,__G0__,__ACCENT__); transform-origin:50% 50%; }
+      #fc4 .nt { position:absolute; left:0; right:0; top:200px; text-align:center; font-weight:800; font-size:23px; letter-spacing:.08em; color:#fff; }
+      #fc2 .mini { position:absolute; left:0; right:0; top:22px; text-align:center; font-weight:800; font-size:24px; color:#fff; text-shadow:0 3px 0 rgba(12,12,16,.9); }
+      #fc2 .mini2 { position:absolute; left:0; right:0; top:52px; text-align:center; font-family:"Archivo Black",sans-serif; font-size:54px; line-height:1; }
+
+      /* ---- full-frame overrides ---- */
+      #card { left:0; top:0; width:1080px; height:1920px; border-radius:0; box-shadow:none; background:#000; }
+      .zoomwrap, .vid { width:1080px; height:1920px; }
+      .ub { position:absolute; left:107px; top:130px; width:558px; height:992px; transform:scale(1.55); transform-origin:0 0; }
+      .uf { position:absolute; left:0; top:0; width:558px; height:992px; transform:scale(1.9355); transform-origin:0 0; }
